@@ -73,8 +73,8 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 } // parameters
 
 //TODO Put here the name of your currency
-const char     CRYPTONOTE_NAME[]                             = "";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "";
+const char     CRYPTONOTE_NAME[]                             = "partialcoin";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101c7e87709e35aacb1dfbd6a0d6e6ac8bfaf568ed57ba8b0a3c90ab36a3b719d5f";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
