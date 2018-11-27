@@ -14,7 +14,7 @@ const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
 //TODO Currency-specific address prefix
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = ;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x19;
 //TODO Choose maturity period for your currency
 const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 60;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
@@ -30,13 +30,13 @@ static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED
 
 //TODO Define number of blocks for block size median calculation
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
-const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 10000; //size of block (bytes) after which reward for block calculated using block size
+const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 20000; //size of block (bytes) after which reward for block calculated using block size
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 //TODO Define number of digits
 const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 8;
 //TODO Define minimum fee for transactions
-const uint64_t MINIMUM_FEE                                   = ;
-const uint64_t DEFAULT_DUST_THRESHOLD                        = MINIMUM_FEE;
+const uint64_t MINIMUM_FEE                                   = 100000;
+const uint64_t DEFAULT_DUST_THRESHOLD                        = 100000;
 
 //TODO Define preferred block's target time
 const uint64_t DIFFICULTY_TARGET                             = 120; // seconds
@@ -74,7 +74,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 
 //TODO Put here the name of your currency
 const char     CRYPTONOTE_NAME[]                             = "partialcoin";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101c7e87709e35aacb1dfbd6a0d6e6ac8bfaf568ed57ba8b0a3c90ab36a3b719d5f";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
@@ -106,8 +106,8 @@ const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1
 
 //TODO Add here your network seed nodes
 const std::initializer_list<const char*> SEED_NODES = {
-  //"your_seed_ip1.com:8080",
-  //"your_seed_ip2.com:8080",
+  "35.162.139.142:57575,"
+  "54.187.68.179:57576,"
 };
 
 struct CheckpointData {
